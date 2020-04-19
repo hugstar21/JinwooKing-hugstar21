@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+    
+    <security:http pattern="/resources/css/**" security="none"/>
+	<security:http pattern="/resources/js/**" security="none"/>
+	
+    <!-- <bean id="userLoginSuccess" class="com.sunstar.handler.UserLoginSucessHandler"></bean>
+	 
+		<security:http pattern="/downlaod/**" security="none"/> -->
+	
+	<!-- <security:http use-expressions="true">
+		<security:intercept-url pattern="/all" access="permitAll"/>
+		<security:intercept-url pattern="/userlogin/**" access="isAnonymous()"/>
+		<security:intercept-url	pattern="/seller/**" access="hasRole('ROLE_MANAGER')" />
+		<security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url	pattern="/member" access="isAuthenticated()" />
+
+
+		<security:form-login login-page="/userlogin" authentication-success-handler-ref="userLoginSuccess"/>             
+		<security:logout logout-url="/userlogout" invalidate-session="true" logout-success-url="/"/>
+		<security:access-denied-handler error-page="/error"/>
+		<security:csrf request-matcher-ref="csrfMatcher"/>
+    	<security:headers>
+    		<security:frame-options policy="SAMEORIGIN"/>
+    	</security:headers>
+	</security:http> -->
+		
+	<!-- <bean name="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
+	<security:authentication-manager>
+		<security:authentication-provider user-service-ref="AuthService">
+			<security:password-encoder ref="passwordEncoder"></security:password-encoder>
+		</security:authentication-provider>
+	</security:authentication-manager> -->
+	    
+     <!-- <bean id="csrfMatcher" class="org.springframework.security.web.util.matcher.AndRequestMatcher">
+     	<constructor-arg>
+     	<list>
+     	<value>#{T(org.springframework.security.web.csrf.CsrfFilter).DEFAULT_CSRF_MATCHER}</value>
+     	<bean class="org.springframework.security.web.util.matcher.NegatedRequestMatcher"> 
+     		<constructor-arg >
+     		<bean class="org.springframework.security.web.util.matcher.AntPathRequestMatcher">
+     			<constructor-arg value="/addr"/>
+     			</bean>
+     		</constructor-arg>
+     	 </bean>
+     	</list>
+     	</constructor-arg>
+     </bean> -->
+	
+</beans>
+
