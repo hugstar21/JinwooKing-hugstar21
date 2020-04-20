@@ -63,6 +63,109 @@
 				</div>
 			</div>
 		</div>
+		<div class="main-slider">
+			<div class="main-slick-list">
+				<div class="slick-initialized slick-slider">
+					<div class="spot_prev spot_bg"></div>
+					<div class="slick-list">
+						<div class="slick-track"
+							style="opacity: 1;">
+							<div class="slick-slide slick-cloned main-slick-slide"
+								data-index="-1"">
+								<div class="main-slick_banner"
+									style="background: url(https://d2.naver.com/image/20180416/674071236161.png) 50% 0px/1900px 440px no-repeat rgb(0, 181, 108);">
+									<strong class="blind"></strong>
+									<p class="blind"></p>
+									<a href="https://developers.naver.com/main/" target="_blank"
+										style="bottom: 104px; width: 177px; margin-left: -88px; height: 54px;"></a>
+								</div>
+							</div>
+							<div class="slick-slide main-slick-slide" data-index="0"
+								tabindex="-1" style="outline: none; width: 1072px;">
+								<a href="https://deview.kr/"><div class="main-slick_banner"
+										style="background: url(https://d2.naver.com/image/20190801/069552621837.png) 50% 0px/1900px 440px no-repeat rgb(84, 112, 255);">
+										<strong class="blind"></strong>
+										<p class="blind"></p>
+									</div></a>
+							</div>
+							<div class="slick-slide main-slick-slide" data-index="1"
+								tabindex="-1" style="outline: none; width: 1072px;">
+								<div class="main-slick_banner"
+									style="background: url(https://d2.naver.com/image/20180416/009960058510.png) 50% 0px/1900px 440px no-repeat rgb(50, 67, 92);">
+									<strong class="blind"></strong>
+									<p class="blind"></p>
+								</div>
+							</div>
+							<div
+								class="slick-slide slick-active slick-current main-slick-slide"
+								data-index="2" tabindex="-1"
+								style="outline: none; width: 1072px;">
+								<div class="main-slick_banner"
+									style="background: url(https://d2.naver.com/image/20180416/028114293283.png) 50% 0px/1900px 440px no-repeat rgb(55, 72, 85);">
+									<strong class="blind"></strong>
+									<p class="blind"></p>
+									<a href="http://naver.github.io/" target="_blank"
+										style="bottom: 83px; width: 244px; margin-left: -122px; height: 54px;"></a>
+								</div>
+							</div>
+							<div class="slick-slide main-slick-slide" data-index="3"
+								tabindex="-1" style="outline: none; width: 1072px;">
+								<div class="main-slick_banner"
+									style="background: url(https://d2.naver.com/image/20180416/674071236161.png) 50% 0px/1900px 440px no-repeat rgb(0, 181, 108);">
+									<strong class="blind"></strong>
+									<p class="blind"></p>
+									<a href="https://developers.naver.com/main/" target="_blank"
+										style="bottom: 104px; width: 177px; margin-left: -88px; height: 54px;"></a>
+								</div>
+							</div>
+							<div class="slick-slide slick-cloned main-slick-slide"
+								data-index="4" style="width: 1072px;">
+								<a href="https://deview.kr/"><div class="main-slick_banner"
+										style="background: url(https://d2.naver.com/image/20190801/069552621837.png) 50% 0px/1900px 440px no-repeat rgb(84, 112, 255);">
+										<strong class="blind"></strong>
+										<p class="blind"></p>
+									</div></a>
+							</div>
+							<div class="slick-slide slick-cloned main-slick-slide"
+								data-index="5" style="width: 1072px;">
+								<div class="main-slick_banner"
+									style="background: url(https://d2.naver.com/image/20180416/009960058510.png) 50% 0px/1900px 440px no-repeat rgb(50, 67, 92);">
+									<strong class="blind"></strong>
+									<p class="blind"></p>
+								</div>
+							</div>
+							<div class="slick-slide slick-cloned main-slick-slide"
+								data-index="6" style="width: 1072px;">
+								<div class="main-slick_banner"
+									style="background: url(https://d2.naver.com/image/20180416/028114293283.png) 50% 0px/1900px 440px no-repeat rgb(55, 72, 85);">
+									<strong class="blind"></strong>
+									<p class="blind"></p>
+									<a href="http://naver.github.io/" target="_blank"
+										style="bottom: 83px; width: 244px; margin-left: -122px; height: 54px;"></a>
+								</div>
+							</div>
+							<div class="slick-slide slick-cloned main-slick-slide"
+								data-index="7" style="width: 1072px;">
+								<div class="main-slick_banner"
+									style="background: url(https://d2.naver.com/image/20180416/674071236161.png) 50% 0px/1900px 440px no-repeat rgb(0, 181, 108);">
+									<strong class="blind"></strong>
+									<p class="blind"></p>
+									<a href="https://developers.naver.com/main/" target="_blank"
+										style="bottom: 104px; width: 177px; margin-left: -88px; height: 54px;"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="spot_next spot_bg"></div>
+					<ul class="banner_nv" style="display: block;">
+						<li class=""><button>1</button></li>
+						<li class=""><button>2</button></li>
+						<li class="slick-active"><button>3</button></li>
+						<li class=""><button>4</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
