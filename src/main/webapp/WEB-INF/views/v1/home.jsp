@@ -21,11 +21,38 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 		crossorigin="anonymous"></script> 
 
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style2.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 
 <title>jinstar</title>
+<style>
+#wrap {
+    position: relative;
+    height: auto;
+    min-height: 100%;
+}
+
+body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, a, button, select {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+div {
+    display: block;
+}
+
+body, input, textarea, select, button, table {
+    font-family: Avenir,'Lato',"나눔바른고딕",NanumBarunGothic,"애플 SD 산돌고딕 Neo","Apple SD Gothic Neo","나눔고딕",NanumGothic,"맑은 고딕","Malgun Gothic","돋움",dotum,AppleGothic,sans-serif;
+    font-size: 12px;
+    /* -webkit-text-size-adjust: none; */
+}
+
+</style>
 </head>
 <body>
+<div id="wrap" class="main">
 	<header>
 		<jsp:include page="header.jsp" />
 	</header>
@@ -35,6 +62,7 @@
 	<footer>
 		<jsp:include page="footer.jsp" />
 	</footer>
+</div>
 </body>
 </html>
 
