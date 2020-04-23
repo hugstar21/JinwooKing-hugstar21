@@ -14,30 +14,42 @@ body, input, textarea, select, button, table {
 header{
 	padding-top: 68px;
 }
-nav{
-	height: 68px;
-	background-color: white;
-    padding: 0px 21% !important;
+.navdiv{
+    max-width: 100%;
+    height: 68px;
+    background-color: white;
     border-bottom: 1px solid #d6d6d6;
+}
+nav{
+	height: 67px;
+	max-width: 1180px;
+	background-color: white;
+    margin: 0px auto !important;
 }
 .navbar-brand{
 	font-family: Avenir,'Lato',"애플 SD 산돌고딕 Neo","Apple SD Gothic Neo","나눔바른고딕",NanumBarunGothic,"나눔고딕",NanumGothic,"맑은 고딕","Malgun Gothic","돋움",dotum,AppleGothic,sans-serif;
 	font-size: 16px;
     color: #a0a0a0 !important;
+    margin-right: 0px;
 }
-.btn_search {
+.mobilenav{
+	display: none !important;
+}
+.pcbtn_search, .mobilebtn_search{
     width: 43px;
     height: 34px;
     border: 0;
-    border-left: 1px solid #E7E7E7;
     border-radius: 0;
     margin-left: 10px;
     font-family: xeicon;
     background: #fff;
     color: #a5a5a5;
-    font-size: 16px !important;
+    font-size: 18px !important;
     letter-spacing: -2px;
     transition: all 0.3s ease;
+}
+.pcbtn_search{
+	border-left: 1px solid #E7E7E7;
 }
 .search_input{
     border: 1px solid #d3d3d3;
@@ -49,25 +61,73 @@ nav{
     -webkit-appearance: none;
     transition: all 0.3s ease;
 }
+.mobilemenu {
+  display: inline-block;
+  cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+  width: 24px;
+  height: 2px;
+  background-color: #a5a5a5;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 4px);
+  transform: rotate(-45deg) translate(-5px, 4px);
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-7px, -7px);
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+@media all and (max-width:960px){
+	.pcnav{ 
+	 display: none;
+	}
+	.mobilenav{
+	 display: block !important;
+	}
+}
 </style>
+<script>
+function menu(x) {
+  x.classList.toggle("change");
+}
+</script>
 </head>
 <body>
+<div class="navdiv fixed-top">
 <nav class="navbar fixed-top navbar-light">
+  <div class="mobilemenu mobilenav" onclick="menu(this)">
+	 <div class="bar1"></div>
+	 <div class="bar2"></div>
+	 <div class="bar3"></div>
+  </div>
+
   <a class="navbar-brand" href="#" style="font-weight: bolder;">
     <img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
     Bootstrap 
   </a>
-  <a class="navbar-brand" href="#">Profile</a>
-  <a class="navbar-brand" href="#">Story</a>
-  <a class="navbar-brand" href="#">Board</a>
-  <a class="navbar-brand" href="#">About</a>
-  <form class="form-inline">
+  
+  <a class="navbar-brand pcnav" href="#">Profile</a>
+  <a class="navbar-brand pcnav" href="#">Story</a>
+  <a class="navbar-brand pcnav" href="#">Board</a>
+  <a class="navbar-brand pcnav" href="#">About</a>
+  
+  <form class="form-inline pcnav">
     <input class="form-control mr-sm-1 search_input" type="search" placeholder="jinstar에서 검색" aria-label="Search">
-    <button type="submit" class="btn_search">
+    <button type="submit" class="pcbtn_search">
     	<i class="xi-search xi-x"></i>
     </button>
   </form>
+
+  <button type="submit" class="mobilebtn_search mobilenav">
+   	<i class="xi-search xi-x"></i>
+  </button>
+  
 </nav>
+</div>
 <h1>header1</h1>
 <h1>header2</h1>
 <h1>header3</h1>
@@ -77,16 +137,12 @@ nav{
 <h1>header7</h1>
 <h1>header8</h1>
 <h1>header9</h1>
-<h1>header</h1>
-<h1>header</h1>
-<h1>header</h1>
-<h1>header</h1>
-<h1>header</h1>
-<h1>header</h1>
-<h1>header</h1>
-<h1>header</h1>
-<h1>header</h1>
-<h1>header</h1>
-<h1>header</h1>
+<h1>header10</h1>
+<h1>header11</h1>
+<h1>header12</h1>
+<h1>header13</h1>
+<h1>header14</h1>
+<h1>header15</h1>
+
 </body>
 </html>
