@@ -81,6 +81,37 @@ nav{
   -webkit-transform: rotate(45deg) translate(-7px, -7px);
   transform: rotate(45deg) translate(-7px, -7px);
 }
+.togglenav, .togglesearch{
+	display: none;
+	padding-top: 67px;
+	background-color: white;
+	border-bottom: 1px solid #d6d6d6;
+}
+.togglenav ul{
+	border-top: 1px solid #d6d6d6;
+	padding: 5px 0 20px;	
+}
+.togglenav ul li{
+	border-bottom: 0px solid #d6d6d6 !important;
+	padding: 4px;
+	text-align: center;
+}
+.togglenav ul li a {
+    font-family: Avenir,'Lato',"나눔바른고딕",NanumBarunGothic,"애플 SD 산돌고딕 Neo","Apple SD Gothic Neo","나눔고딕",NanumGothic,"맑은 고딕","Malgun Gothic","돋움",dotum,AppleGothic,sans-serif;
+    color: #000;
+    font-size: 16px;
+}
+.togglenav ul li a:hover{
+	text-decoration: none;
+}
+.togglesearch form{
+	border-top: 1px solid #d6d6d6;
+}
+
+.togglesearch input {
+    width: 100% !important;
+    margin: 7px 15px !important;
+}
 @media all and (max-width:960px){
 	.pcnav{ 
 	 display: none;
@@ -94,39 +125,76 @@ nav{
 function menu(x) {
   x.classList.toggle("change");
 }
+
+$(document).ready(function(){
+	//pc 크기 펼쳐진 mobile 메뉴와 검색창 사라지기
+	$(window).resize(function(){
+		if($(document).width()>960){
+			if($(".togglenav").css("display")==="block"){
+				 $(".mobilemenu").trigger("click");
+			}
+			$(".togglesearch").css("display","none");
+			$(".togglenav").css("display","none");
+		}	  
+	});	
+	//모바일 메뉴 토글
+	  $(".mobilemenu").click(function(){
+		$(".togglesearch").css("display","none");
+	    $(".togglenav").slideToggle("slow");
+	  });
+	//모바일 검색창 토글  
+	  $(".mobilebtn_search").click(function(){
+	    $(".togglenav").css("display","none");
+	    $(".togglesearch").slideToggle("slow");
+		  });
+	});
+	
 </script>
 </head>
 <body>
 <div class="navdiv fixed-top">
-<nav class="navbar fixed-top navbar-light">
-  <div class="mobilemenu mobilenav" onclick="menu(this)">
-	 <div class="bar1"></div>
-	 <div class="bar2"></div>
-	 <div class="bar3"></div>
-  </div>
-
-  <a class="navbar-brand" href="#" style="font-weight: bolder;">
-    <img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-    Bootstrap 
-  </a>
-  
-  <a class="navbar-brand pcnav" href="#">Profile</a>
-  <a class="navbar-brand pcnav" href="#">Story</a>
-  <a class="navbar-brand pcnav" href="#">Board</a>
-  <a class="navbar-brand pcnav" href="#">About</a>
-  
-  <form class="form-inline pcnav">
-    <input class="form-control mr-sm-1 search_input" type="search" placeholder="jinstar에서 검색" aria-label="Search">
-    <button type="submit" class="pcbtn_search">
-    	<i class="xi-search xi-x"></i>
-    </button>
-  </form>
-
-  <button type="submit" class="mobilebtn_search mobilenav">
-   	<i class="xi-search xi-x"></i>
-  </button>
-  
-</nav>
+	<nav class="navbar fixed-top navbar-light">
+	  <div class="mobilemenu mobilenav" onclick="menu(this)">
+		 <div class="bar1"></div>
+		 <div class="bar2"></div>
+		 <div class="bar3"></div>
+	  </div>
+	
+	  <a class="navbar-brand" href="#" style="font-weight: bolder;">
+	    <img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+	    Bootstrap 
+	  </a>
+	  
+	  <a class="navbar-brand pcnav" href="#">Profile</a>
+	  <a class="navbar-brand pcnav" href="#">Story</a>
+	  <a class="navbar-brand pcnav" href="#">Board</a>
+	  <a class="navbar-brand pcnav" href="#">About</a>
+	  
+	  <form class="form-inline pcnav">
+	    <input class="form-control mr-sm-1 search_input" type="search" placeholder="jinstar에서 검색" aria-label="Search">
+	    <button type="submit" class="pcbtn_search">
+	    	<i class="xi-search xi-x"></i>
+	    </button>
+	  </form>
+	
+	  <button type="submit" class="mobilebtn_search mobilenav">
+	   	<i class="xi-search xi-x"></i>
+	  </button>
+	  
+	</nav>
+	<div class="togglenav">
+		<ul class="list-group list-group-flush">
+		  <li class="list-group-item"><a href="#">Profile</a></li>
+		  <li class="list-group-item"><a href="#">Story</a></li>
+		  <li class="list-group-item"><a href="#">Board</a></li>
+		  <li class="list-group-item"><a href="#">About</a></li>
+		</ul>
+	</div>
+	<div class="togglesearch">
+		<form class="form-inline">
+			<input class="form-control mr-sm-1 search_input" type="search" placeholder="jinstar에서 검색" aria-label="Search">
+		</form>
+	</div>
 </div>
 <h1>header1</h1>
 <h1>header2</h1>
