@@ -161,7 +161,7 @@ $(document).ready(function(){
 	  </div>
 	
 	  <a class="navbar-brand" href="#" style="font-weight: bolder;">
-	    <img src="${pageContext.request.contextPath}/resources/img/logo/logo.png" width="100" height="auto" class="d-inline-block align-top" alt=""> 
+	    <img src="${pageContext.request.contextPath}/resources/img/logo/logo1.png" width="100" height="auto" class="d-inline-block align-top" alt=""> 
 	  </a>
 	  
 	  <a class="navbar-brand pcnav" href="#">Profile</a>
